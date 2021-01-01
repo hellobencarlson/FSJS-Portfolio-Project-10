@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500");
+@import url('https://fonts.googleapis.com/css?family=Cousine');
+
+
 .App {
   text-align: center;
 }
@@ -7,6 +11,186 @@
   pointer-events: none;
 }
 
+body {
+  font-family: "Work sans", sans serif;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #480090;
+  color: white;
+  height: 75px;
+  margin-top: -10px;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+.header a {
+  color: darkgray;
+  text-decoration: none;
+}
+
+.header--logo {
+  float: left;
+}
+
+nav {
+  float: right;
+  padding: 30px;
+}
+
+h1 {
+  padding: 3px 10px;
+}
+
+.signup, .signin {
+  padding: 5px;
+}
+
+/* COURSES */
+
+.grid-33 {
+  height: 100px;
+  background-color: #8c1aff;
+  width: 25%;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.course--title {
+  color: white;
+  margin: 8px;
+}
+
+.course--label {
+  color: darkgray;
+  margin: 8px;
+}
+
+svg {
+  height: 15px;
+  padding-right: 3px;
+}
+
+#new-course {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+#new-course a {
+  color: 	#707070;
+  text-decoration: none;
+}
+
+
+/* COURSE DETAIL */
+
+.button {
+  height: 18px;
+  background-color: #8c1aff;
+  width: 35%;
+  margin-right: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  color: 	white;
+  text-decoration: none;
+  border: 1px solid #8c1aff;
+}
+
+#button-secondary {
+  background-color: white;
+  color: #8c1aff;
+}
+
+.course--label {
+  display: inline;
+  width: 20px;
+}
+
+.buttons {
+  height: 60px;
+  width: 100%;
+  float: left;
+  padding-top: 10px;
+}
+
+.course-details {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.course-info {
+  float: left;
+}
+
+.course-stats {
+  float: right;
+  margin-right: 20px;
+}
+
+.materials h4, .eta h4 {
+  color: gray;
+}
+
+/* CREATE COURSE */
+
+
+.button-2 {
+  height: 40px;
+  background-color: #8c1aff;
+  width: 35%;
+  font-size: 18px;
+  margin-right: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  color: 	white;
+  text-decoration: none;
+  border: 1px solid #8c1aff;
+  float: left;
+}
+
+#button-secondary-2 {
+  background-color: white;
+  color: #8c1aff;
+}
+
+.course--detail {
+  margin-left: 25px;
+}
+
+.time-materials {
+  float: right;
+  width: 30%;
+  margin-right: 20px;
+}
+
+.name-description {
+  float: left;
+  width: 60%;
+}
+
+
+
+#title {
+  width: 80%;
+}
+
+#description {
+  width: 80%;
+  height: 120px;
+}
+
+#materialsNeeded {
+  height: 70px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,7 +199,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 20vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

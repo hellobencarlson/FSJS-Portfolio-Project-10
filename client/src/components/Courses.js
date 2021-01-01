@@ -1,58 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Course from './Course';
+import { Consumer } from '../Context';
 
-
-export default class Courses extends Component {
-
-    state = {
-        courses: [],
-    }
-
-    render() {
-        const {
-            courses
-        } = this.state;
-    
-    
+const Courses = () => { 
     return (
-        <div>
-             <div>
-            { this.courses }
-            </div>
-            <div>
-                { courses }
-            </div>
-        </div>
-       
-    )
-    
-    }
+        <Consumer>
+            { context => {
+                const results = context.courseList;
+                let courses = results.map(course =>
+                        <Course
+                            title={course.title}
+                            id={course.id}
+                        />   
+                        );
+            
+            return (
+                    <div>
+                        {courses} 
+                    <div class="grid-33" id="new-course"><a href="/createcourse">
+                        <h3 class="course--add--title"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            viewBox="0 0 13 13" class="add">
+                            <polygon points="7,6 7,0 6,0 6,6 0,6 0,7 6,7 6,13 7,13 7,7 13,7 13,6 "></polygon>
+                        </svg>New Course</h3>
+                        </a>
+                    </div>
+                </div>
+        
+            )
 
+        }}
+        </Consumer>
 
-
-
+    );
 }
-
-    // const results = props.data;
-    // let courses = results.map(course =>
-    //     <li>
-    //     <a href={`/courses/${course.id}`}>
-    //         {course.title}
-    //     </a>
-    //     </li>
-    // );
-
-//     return(
-//         <div>
-//              <ul>
-//             {/* {courses} */}
-//         </ul>
-//         <p>
-//            <a href="/create-course">
-//                 Create a Course
-//             </a>
-//         </p>
-//         </div>
-//     );
-// }
-
-// export default CourseList;
+    
+    export default Courses;
