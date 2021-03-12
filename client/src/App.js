@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { 
+import {
   BrowserRouter,
   Route,
   Switch
 } from 'react-router-dom';
 
-
+// import statements
 import './App.css';
 import Courses from './components/Courses';
 import CourseDetail from './components/CourseDetail';
@@ -27,9 +27,9 @@ export default class App extends Component {
                 <Route exact path="/createcourse" component={CreateCourse} />
                 <Route component={NotFound} />
               </Switch>
-              
-            </BrowserRouter>  
+
+            </BrowserRouter>
     )
-   } 
+   }
 
 }
